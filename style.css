@@ -4,3 +4,10 @@
     background-size: cover;
     height: 100vh;
 }
+#bg-img{
+    background-image: url(./images/bg-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 322px;
+    max-width: 976px;
+}
