@@ -1,198 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Besnik.</title>
     <!--Tailwind CSS-->
     <script src="https://cdn.tailwindcss.com"></script>
     <!--External CSS-->
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <!--Hero Section-->
     <div id="div" class="2xl:container mx-auto py-2">
-        <div class="w-[90%] mx-auto grid grid-cols-1">
-            <div class="flex justify-between items-center py-4">
-                <img src="./images/Besnik..svg" alt="" class="ps-5">
-                <nav class="flex gap-4 md:gap-16">
-                    <a href="#" class="text-white text-[18px] font-medium">Home</a>
-                    <a href="#" class="text-white text-[18px] font-medium">Plan</a>
-                    <a href="#" class="text-white text-[18px] font-medium">Blog</a>
-                </nav>
-            </div>
+      <div class="w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2">
+        <div class="flex justify-between items-center py-4">
+          <img src="./images/Besnik..svg" alt="" class="ps-5" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="1.7em"
+            height="1.7em"
+            class="md:hidden"
+            id="menuBtn"
+          >
+            <path
+              fill="white"
+              d="M8.5 13.933H5.563a2.5 2.5 0 0 1-2.5-2.5v-5.87a2.5 2.5 0 0 1 2.5-2.5H8.5a2.5 2.5 0 0 1 2.5 2.5v5.87a2.5 2.5 0 0 1-2.5 2.5m-2.937-9.87a1.5 1.5 0 0 0-1.5 1.5v5.87a1.5 1.5 0 0 0 1.5 1.5H8.5a1.5 1.5 0 0 0 1.5-1.5v-5.87a1.5 1.5 0 0 0-1.5-1.5ZM8.5 20.935H5.564a2.5 2.5 0 0 1 0-5H8.5a2.5 2.5 0 1 1 0 5m-2.934-4a1.5 1.5 0 0 0 0 3H8.5a1.5 1.5 0 1 0 0-3Zm12.87 4H15.5a2.5 2.5 0 0 1-2.5-2.5v-5.87a2.5 2.5 0 0 1 2.5-2.5h2.934a2.5 2.5 0 0 1 2.5 2.5v5.87a2.5 2.5 0 0 1-2.498 2.5m-2.936-9.87a1.5 1.5 0 0 0-1.5 1.5v5.87a1.5 1.5 0 0 0 1.5 1.5h2.934a1.5 1.5 0 0 0 1.5-1.5v-5.87a1.5 1.5 0 0 0-1.5-1.5Zm2.936-3.002H15.5a2.5 2.5 0 0 1 0-5h2.934a2.5 2.5 0 0 1 0 5Zm-2.934-4a1.5 1.5 0 0 0 0 3h2.934a1.5 1.5 0 0 0 0-3Z"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="1.8em"
+            height="1.8em"
+            class="hidden md:hidden"
+            id="crossBtn"
+          >
+            <path
+              fill="white"
+              d="M20.968 18.448a2.577 2.577 0 0 1-2.73 2.5c-2.153.012-4.306 0-6.459 0a.5.5 0 0 1 0-1c2.2 0 4.4.032 6.6 0c1.107-.016 1.589-.848 1.589-1.838V5.647A1.55 1.55 0 0 0 19 4.175a3 3 0 0 0-1.061-.095h-6.16a.5.5 0 0 1 0-1c2.224 0 4.465-.085 6.687 0a2.567 2.567 0 0 1 2.5 2.67Z"
+            ></path>
+            <path
+              fill="currentColor"
+              d="M3.176 11.663a.46.46 0 0 0-.138.311q.002.021-.006.043c-.008.022 0 .027.006.041a.46.46 0 0 0 .138.312l3.669 3.669a.5.5 0 0 0 .707-.707l-2.815-2.816h10.742a.5.5 0 0 0 0-1H4.737L7.552 8.7a.5.5 0 0 0-.707-.707Z"
+            ></path>
+          </svg>
         </div>
-        <div class="w-[90%] mx-auto grid grid-cols-1">
-            <div class="flex flex-col justify-center items-center pt-[130px] md:pt-[130px]">
-                <h1 class="text-center text-[50px] text-white md:text-[98px] font-bold max-w-[589px] md:leading-[100px]">Tell a better brand story</h1>
-            <p class="text-[16px] max-w-[490px] text-center font-normal text-white pt-[25px]">Automate the way you search through hashtags and suggested
-                profiles to find results 100x faster.</p>
-            <button class="flex justify-center items-center rounded-full text-white mt-[20px] md:mt-[50px] gap-2 bg-[#231A36] py-[17px] px-[35px]">Request Demo <img src="./images/arrow-right-2-16px 1.svg" alt=""></button>
-            </div>
+        <div class="hidden md:block" id="content">
+          <div
+            class="flex bg-white md:text-white md:bg-inherit py-4 items-center flex-col md:flex-row md:justify-end gap-7 md:gap-16"
+          >
+            <a href="#" class="text-black md:text-white text-[18px] font-medium" id="home">Home</a>
+            <a href="#" class="text-black md:text-white text-[18px] font-medium" id="plan">Plan</a>
+            <a href="#" class="text-black md:text-white text-[18px] font-medium" id="blog">Blog</a>
+          </div>
         </div>
+      </div>
+      <div class="w-[90%] mx-auto grid grid-cols-1">
+        <div
+          class="flex flex-col justify-center items-center pt-[130px] md:pt-[130px]"
+        >
+          <h1
+            class="text-center text-[50px] text-white md:text-[98px] font-bold max-w-[589px] md:leading-[100px]"
+          >
+            Tell a better brand story
+          </h1>
+          <p
+            class="text-[16px] max-w-[490px] text-center font-normal text-white pt-[25px]"
+          >
+            Automate the way you search through hashtags and suggested profiles
+            to find results 100x faster.
+          </p>
+          <button
+            class="flex justify-center items-center rounded-full text-white mt-[20px] md:mt-[50px] gap-2 bg-[#231A36] py-[17px] px-[35px]"
+          >
+            Request Demo <img src="./images/arrow-right-2-16px 1.svg" alt="" />
+          </button>
+        </div>
+      </div>
     </div>
     <!--Grid Section-->
     <div class="2xl:container mx-auto py-10">
-        <div class="w-[90%] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
-            <div class="flex items-center justify-center">
-                <img src="./images/大通银行.png" alt="">
-            </div>
-            <div class="flex items-center justify-center">
-                <img src="./images/Asana-团队协作应用.png" alt="">
-            </div>
-            <div class="flex items-center justify-center mt-6 md:mt-0">
-                <img src="./images/Group 9.png" alt="">
-            </div>
-            <div class="flex items-center justify-center mt-6 lg:mt-0">
-                <img src="./images/Buzzfeed 网络新闻媒体公司.png" alt="">
-            </div>
-            <div class="flex items-center justify-center mt-6 lg:mt-0">
-                <img src="./images/Mask Group.png" alt="">
-            </div>
-            <div class="flex items-center justify-center mt-6 lg:mt-0">
-                <img src="./images/Walmart.png" alt="">
-            </div>
+      <div
+        class="w-[90%] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6"
+      >
+        <div class="flex items-center justify-center">
+          <img src="./images/大通银行.png" alt="" />
         </div>
+        <div class="flex items-center justify-center">
+          <img src="./images/Asana-团队协作应用.png" alt="" />
+        </div>
+        <div class="flex items-center justify-center mt-6 md:mt-0">
+          <img src="./images/Group 9.png" alt="" />
+        </div>
+        <div class="flex items-center justify-center mt-6 lg:mt-0">
+          <img src="./images/Buzzfeed 网络新闻媒体公司.png" alt="" />
+        </div>
+        <div class="flex items-center justify-center mt-6 lg:mt-0">
+          <img src="./images/Mask Group.png" alt="" />
+        </div>
+        <div class="flex items-center justify-center mt-6 lg:mt-0">
+          <img src="./images/Walmart.png" alt="" />
+        </div>
+      </div>
     </div>
     <!--Solution Section-->
     <div class="2xl:container mx-auto py-5 bg-[#EBEBEB]">
-        <div class="w-[80%] mx-auto grid grid-cols-1 mt-[30px]">
-            <div class="flex flex-col items-center justify-center">
-                <h1 class="text-[40px] font-semibold">Solutions for every need</h1>
-                <p class="text-[16px] text-[#426666] font-normal text-center max-w-[550px]">Join thousands of marketers and entrepreneurs for a 2-day event at the forefront of social commerce.</p>
-            </div>
+      <div class="w-[80%] mx-auto grid grid-cols-1 mt-[30px]">
+        <div class="flex flex-col items-center justify-center">
+          <h1 class="text-[40px] font-semibold">Solutions for every need</h1>
+          <p
+            class="text-[16px] text-[#426666] font-normal text-center max-w-[550px]"
+          >
+            Join thousands of marketers and entrepreneurs for a 2-day event at
+            the forefront of social commerce.
+          </p>
         </div>
-        <div class="w-[60%] mx-auto grid grid-cols-1 md:grid-cols-2 mt-16">
-            <div class="flex flex-col gap-2 justify-center">
-                <p class="text-[14px] font-semibold text-[#414141]">INFLUENCER</p>
-                <h1 class="text-[#1B1BEB] text-[30px] font-semibold">Influencer marketing</h1>
-                <p class="max-w-[340px] text-[#426666] text-[16px] font-normal">Create infinite pieces of content with our influencer product. Build,streamline,manage large-scale influencer programs</p>
-                <a href="#" class="flex justify-start items-center gap-3 mt-3">
-                    <span>Learn More</span>
-                    <img src="./images/arrow-right-2-16px 1 - Copy.svg" alt="">
-                </a>
-            </div>
-            <div class="flex items-center justify-end mt-5 md:mt-0">
-                <img src="./images/imgs1.svg" alt="">
-            </div>
+      </div>
+      <div class="w-[60%] mx-auto grid grid-cols-1 md:grid-cols-2 mt-16">
+        <div class="flex flex-col gap-2 justify-center">
+          <p class="text-[14px] font-semibold text-[#414141]">INFLUENCER</p>
+          <h1 class="text-[#1B1BEB] text-[30px] font-semibold">
+            Influencer marketing
+          </h1>
+          <p class="max-w-[340px] text-[#426666] text-[16px] font-normal">
+            Create infinite pieces of content with our influencer product.
+            Build,streamline,manage large-scale influencer programs
+          </p>
+          <a href="#" class="flex justify-start items-center gap-3 mt-3">
+            <span>Learn More</span>
+            <img src="./images/arrow-right-2-16px 1 - Copy.svg" alt="" />
+          </a>
         </div>
-        <div class="w-[60%] mx-auto grid grid-cols-1 md:grid-cols-2 mt-16">
-            <div class="flex items-center justify-start">
-                <img src="./images/imgs2.svg" alt="">
-            </div>
-            <div class="flex flex-col gap-2 justify-center mt-5 md:mt-0">
-                <p class="text-[14px] font-semibold text-[#414141]">COMMUNITY</p>
-                <h1 class="text-[#1B1BEB] text-[30px] font-semibold">Community marketing</h1>
-                <p class="max-w-[340px] text-[#426666] text-[16px] font-normal">Create infinite pieces of content with our influencer product. Build,streamline,manage large-scale influencer programs</p>
-                <a href="#" class="flex justify-start items-center gap-3 mt-3">
-                    <span>Learn More</span>
-                    <img src="./images/arrow-right-2-16px 1 - Copy.svg" alt="">
-                </a>
-            </div>
+        <div class="flex items-center justify-end mt-5 md:mt-0">
+          <img src="./images/imgs1.svg" alt="" />
         </div>
-        <div class="w-[60%] mx-auto grid grid-cols-1 md:grid-cols-2 mt-16">
-            <div class="flex flex-col gap-2 justify-center">
-                <p class="text-[14px] font-semibold text-[#414141]">SERVICES</p>
-                <h1 class="text-[#1B1BEB] text-[30px] font-semibold">Managed services</h1>
-                <p class="max-w-[340px] text-[#426666] text-[16px] font-normal">Create infinite pieces of content with our influencer product. Build,streamline,manage large-scale influencer programs</p>
-                <a href="#" class="flex justify-start items-center gap-3">
-                    <span>Learn More</span>
-                    <img src="./images/arrow-right-2-16px 1 - Copy.svg" alt="">
-                </a>
-            </div>
-            <div class="flex items-center justify-end mt-5 md:mt-0">
-                <img src="./images/imgs3.svg" alt="">
-            </div>
+      </div>
+      <div class="w-[60%] mx-auto grid grid-cols-1 md:grid-cols-2 mt-16">
+        <div class="flex items-center justify-start">
+          <img src="./images/imgs2.svg" alt="" />
         </div>
+        <div class="flex flex-col gap-2 justify-center mt-5 md:mt-0">
+          <p class="text-[14px] font-semibold text-[#414141]">COMMUNITY</p>
+          <h1 class="text-[#1B1BEB] text-[30px] font-semibold">
+            Community marketing
+          </h1>
+          <p class="max-w-[340px] text-[#426666] text-[16px] font-normal">
+            Create infinite pieces of content with our influencer product.
+            Build,streamline,manage large-scale influencer programs
+          </p>
+          <a href="#" class="flex justify-start items-center gap-3 mt-3">
+            <span>Learn More</span>
+            <img src="./images/arrow-right-2-16px 1 - Copy.svg" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="w-[60%] mx-auto grid grid-cols-1 md:grid-cols-2 mt-16">
+        <div class="flex flex-col gap-2 justify-center">
+          <p class="text-[14px] font-semibold text-[#414141]">SERVICES</p>
+          <h1 class="text-[#1B1BEB] text-[30px] font-semibold">
+            Managed services
+          </h1>
+          <p class="max-w-[340px] text-[#426666] text-[16px] font-normal">
+            Create infinite pieces of content with our influencer product.
+            Build,streamline,manage large-scale influencer programs
+          </p>
+          <a href="#" class="flex justify-start items-center gap-3">
+            <span>Learn More</span>
+            <img src="./images/arrow-right-2-16px 1 - Copy.svg" alt="" />
+          </a>
+        </div>
+        <div class="flex items-center justify-end mt-5 md:mt-0">
+          <img src="./images/imgs3.svg" alt="" />
+        </div>
+      </div>
     </div>
     <!--Search section-->
     <div class="2xl:container mx-auto py-4 bg-[#231A36]">
-        <div class="w-[80%] mx-auto grid grid-cols-1">
-            <div class="flex flex-col items-center">
-                <h1 class="text-center pt-16 text-white max-w-[720px] font-semibold text-[40px]">Search through more than 11 million social media profiles</h1>
-                <p class="text-[#7B9292] max-w-[560px] text-[16px] font-normal text-center">Heepsy’s search filters help you find exactly what you’re looking for, and our influencer reports provide you with the metrics</p>
-            </div>
+      <div class="w-[80%] mx-auto grid grid-cols-1">
+        <div class="flex flex-col items-center">
+          <h1
+            class="text-center pt-16 text-white max-w-[720px] font-semibold text-[40px]"
+          >
+            Search through more than 11 million social media profiles
+          </h1>
+          <p
+            class="text-[#7B9292] max-w-[560px] text-[16px] font-normal text-center"
+          >
+            Heepsy’s search filters help you find exactly what you’re looking
+            for, and our influencer reports provide you with the metrics
+          </p>
         </div>
-        <div class="w-[85%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-10">
-            <div class="flex flex-col items-center justify-center gap-0">
-                <h1 class="text-[40px] font-semibold text-white">2260</h1>
-                <p class="text-[14px] text-[#7B9292] font-normal">Task done</p>
-            </div>
-            <div class="flex flex-col items-center justify-center gap-0">
-                <h1 class="text-[40px] font-semibold text-white">1324</h1>
-                <p class="text-[14px] text-[#7B9292] font-normal">Satisfied Clients</p>
-            </div>
-            <div class="flex flex-col items-center justify-center gap-0">
-                <h1 class="text-[40px] font-semibold text-white">3453</h1>
-                <p class="text-[14px] text-[#7B9292] font-normal">Sponsored</p>
-            </div>
-            <div class="flex flex-col items-center justify-center gap-0">
-                <h1 class="text-[40px] font-semibold text-white">9876</h1>
-                <p class="text-[14px] text-[#7B9292] font-normal">Completed</p>
-            </div>
+      </div>
+      <div
+        class="w-[85%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-10"
+      >
+        <div class="flex flex-col items-center justify-center gap-0">
+          <h1 class="text-[40px] font-semibold text-white">2260</h1>
+          <p class="text-[14px] text-[#7B9292] font-normal">Task done</p>
         </div>
+        <div class="flex flex-col items-center justify-center gap-0">
+          <h1 class="text-[40px] font-semibold text-white">1324</h1>
+          <p class="text-[14px] text-[#7B9292] font-normal">
+            Satisfied Clients
+          </p>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-0">
+          <h1 class="text-[40px] font-semibold text-white">3453</h1>
+          <p class="text-[14px] text-[#7B9292] font-normal">Sponsored</p>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-0">
+          <h1 class="text-[40px] font-semibold text-white">9876</h1>
+          <p class="text-[14px] text-[#7B9292] font-normal">Completed</p>
+        </div>
+      </div>
     </div>
     <!--C;ients Section-->
     <div class="2xl:container mx-auto py-4">
-        <div class="w-[85%] mx-auto grid grid-cols-1">
-            <div class="flex justify-center relative">
-                <div class="hidden md:block absolute left-8 top-5">
-                    <img src="./images/close 1.svg" alt="">
-                </div>
-                <div class="pt-10 flex flex-col items-center">
-                    <h1 class="text-[40px] font-semibold inline-flex relative">Happy Clients<img src="./images/ring 1.png" alt="" class="absolute right-[-30px] bottom-[30px]"></h1>
-                    <p class="text-center max-w-[550px] mt-4 text-[16px] font-normal">The Marketing Accountability Standards Board (MASB) endorses the definitions, purposes, and constructs of classes</p>
-                </div>
-            </div>
+      <div class="w-[85%] mx-auto grid grid-cols-1">
+        <div class="flex justify-center relative">
+          <div class="hidden md:block absolute left-8 top-5">
+            <img src="./images/close 1.svg" alt="" />
+          </div>
+          <div class="pt-10 flex flex-col items-center">
+            <h1 class="text-[40px] font-semibold inline-flex relative">
+              Happy Clients<img
+                src="./images/ring 1.png"
+                alt=""
+                class="absolute right-[-30px] bottom-[30px]"
+              />
+            </h1>
+            <p class="text-center max-w-[550px] mt-4 text-[16px] font-normal">
+              The Marketing Accountability Standards Board (MASB) endorses the
+              definitions, purposes, and constructs of classes
+            </p>
+          </div>
         </div>
-        <div class="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 mt-8 md:mt-10">
-            <div class="flex flex-col items-start justify-center order-2 md:order-1">
-                <p class="text-[22px] font-medium max-w-[477px]">Not weekly or monthly like other sites out there. This ensures that we offer prospective homebuyers and investors with the freshest- hottest deals on the Internet.</p>
-                <h1 class="text-[25px] font-bold mt-4">Rowhan Smith</h1>
-                <p class="text-[16px] font-medium">CEO, Foreclosure</p>
-            </div>
-            <div class="flex justify-center items-center mb-4 md:mb-0 order-1 md:order-2">
-                <img src="./images/Group 1000001781.png" alt="">
-            </div>
+      </div>
+      <div
+        class="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 mt-8 md:mt-10"
+      >
+        <div
+          class="flex flex-col items-start justify-center order-2 md:order-1"
+        >
+          <p class="text-[22px] font-medium max-w-[477px]">
+            Not weekly or monthly like other sites out there. This ensures that
+            we offer prospective homebuyers and investors with the freshest-
+            hottest deals on the Internet.
+          </p>
+          <h1 class="text-[25px] font-bold mt-4">Rowhan Smith</h1>
+          <p class="text-[16px] font-medium">CEO, Foreclosure</p>
         </div>
+        <div
+          class="flex justify-center items-center mb-4 md:mb-0 order-1 md:order-2"
+        >
+          <img src="./images/Group 1000001781.png" alt="" />
+        </div>
+      </div>
     </div>
     <!--Subscribe Section-->
     <div class="2xl:container mx-auto py-4 mt-[50px]">
-        <div class="w-[75%] mx-auto grid grid-cols-1 rounded-3xl"  id="bg-img">
-            <div class="flex flex-col items-center justify-center">
-                <h1 class="md:text-[40px] text-[24px] text-center mt-[5px]  md:mt-[51px] text-white font-bold">Subscribe our newsletter</h1>
-                <p class="max-w-[551px] p-1 md:leading-[28px] mt-[10px] text-center text-white font-light text-[16px]">Join thousands of marketers and entrepreneurs for a 2-day event at the forefront of social commerce.</p>
-                <button class="bg-black font-medium text-[15px] mt-[10px] mb-[10px] md:mt-[30px] md:mb-[70px] py-3 px-8 text-white rounded-2xl">Subscribe</button>
-            </div>
+      <div class="w-[75%] mx-auto grid grid-cols-1 rounded-3xl" id="bg-img">
+        <div class="flex flex-col items-center justify-center">
+          <h1
+            class="md:text-[40px] text-[24px] text-center mt-[5px] md:mt-[51px] text-white font-bold"
+          >
+            Subscribe our newsletter
+          </h1>
+          <p
+            class="max-w-[551px] p-1 md:leading-[28px] mt-[10px] text-center text-white font-light text-[16px]"
+          >
+            Join thousands of marketers and entrepreneurs for a 2-day event at
+            the forefront of social commerce.
+          </p>
+          <button
+            class="bg-black font-medium text-[15px] mt-[10px] mb-[10px] md:mt-[30px] md:mb-[70px] py-3 px-8 text-white rounded-2xl"
+          >
+            Subscribe
+          </button>
         </div>
+      </div>
     </div>
     <!--footer Section-->
     <div class="2xl:container mx-auto py-5">
-        <div class="w-[85%] mt-[40px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            <div class="flex items-center justify-start">
-                <img src="./images/besnik logo.png" alt="">
-            </div>
-            <div class="flex justify-center items-center gap-[35px] mt-3 md:mt-0">
-                <p class="text-[16px] font-medium">Solution</p>
-                <p class="text-[16px] font-medium">Plans</p>
-                <p class="text-[16px] font-medium">Resource</p>
-            </div>
-            <div class="flex justify-end items-center gap-[30px] mt-3 lg:mt-0">
-                <img src="./images/Vector.svg" alt="">
-                <img src="./images/Group 77.svg" alt="" class="mt-[10px]">
-                <img src="./images/Vector(1).svg" alt="">
-            </div>
+      <div
+        class="w-[90%] mt-[40px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+      >
+        <div class="flex items-center justify-center">
+          <img src="./images/besnik logo.png" alt="" />
         </div>
-        <div class="w-[70%] mt-[40px] mx-auto grid grid-cols-1">
-            <div class="flex justify-center items-center">
-                <img src="./images/Line 1.png" alt="" class="h-1">
-            </div>
+        <div class="flex justify-center items-center gap-[35px] mt-3 md:mt-0">
+          <p class="text-[16px] font-medium">Solution</p>
+          <p class="text-[16px] font-medium">Plans</p>
+          <p class="text-[16px] font-medium">Resource</p>
         </div>
-        <div class="w-[70%] mt-[40px] mx-auto grid grid-cols-1">
-            <div class="flex justify-center items-center">
-                <p class="font-normal text-[16px] text-[#959595]">Copyright © 2025 Besnik</p>
-            </div>
+        <div class="flex justify-center items-center gap-[30px] mt-3 lg:mt-0">
+          <img src="./images/Vector.svg" alt="" />
+          <img src="./images/Group 77.svg" alt="" class="mt-[10px]" />
+          <img src="./images/Vector(1).svg" alt="" />
         </div>
+      </div>
+      <div class="w-[60%] mt-[40px] mx-auto grid grid-cols-1">
+        <div class="flex justify-center items-center">
+          <img src="./images/Line 1.png" alt="" class="h-1" />
+        </div>
+      </div>
+      <div class="w-[70%] mt-[40px] mx-auto grid grid-cols-1">
+        <div class="flex justify-center items-center">
+          <p class="font-normal text-[16px] text-[#959595]">
+            Copyright © 2025 Besnik
+          </p>
+        </div>
+      </div>
     </div>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
